@@ -5,7 +5,7 @@ function CounterNumber({ children, size, ...props }) {
     <div
       className={clsx(
         "font-bold inline-flex gap-2 items-baseline",
-        size ? "text-5xl md:text-7xl" : "text-3xl md:text-5xl",
+        size ? "text-5xl md:text-7xl" : "text-2xl md:text-5xl",
         "text-secondary"
       )}
       {...props}

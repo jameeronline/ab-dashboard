@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import SlotCounter from "react-slot-counter";
+import ScaleLoader from "react-spinners/ScaleLoader";
 
 //utilitie
 import cn from "../utilities/cn";
@@ -15,7 +16,7 @@ import TabContent from "./TabContent";
 import { getAbsherData } from "../api/dashboard";
 
 function Main() {
-  const [tabState, setTabState] = useState("1");
+  const [tabState, setTabState] = useState(1);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -40,7 +41,15 @@ function Main() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <main className="lg:container mx-auto px-4 -mt-6 md:-mt-12 z-10 relative">
+        <div className="bg-white rounded-2xl shadow-lg px-4 py-6 mb-0 md:p-12">
+          <div className="flex flex-col justify-center items-center">
+            <ScaleLoader color="#00663D" />
+          </div>
+        </div>
+      </main>
+    );
   }
 
   if (error) {
@@ -48,12 +57,11 @@ function Main() {
   }
 
   return (
-    <main className="lg:container mx-auto px-4 -mt-4 md:-mt-10 z-10 relative">
-      <div className="bg-white rounded-2xl shadow-lg px-4 py-6 md:p-12 mb-16">
+    <main className="lg:container mx-auto px-4 -mt-6 md:-mt-12 z-10 relative">
+      <div className="bg-white rounded-2xl shadow-lg px-4 py-6 mb-6 md:p-12">
         <div className="flex flex-col justify-center items-center gap-4 mb-10 lg:mb-20">
           <CounterWidget className="gap-2 md:gap-4">
             <CounterLabel>إجمالي العمليات</CounterLabel>
-            {/* <CounterNumber size="lg">{data?.totalOps}</CounterNumber> */}
             <div
               className={cn(
                 "font-bold inline-flex gap-2 items-baseline",
@@ -68,34 +76,22 @@ function Main() {
           </CounterWidget>
         </div>
 
-        <div className="flex justify-center items-center gap-2 mb-14">
-          <ButtonRounded
-            active={tabState == 1 && true}
-            onClick={() => handleTab(1)}
-          >
+        <div className="flex justify-center items-center gap-2 mb-8 md:mb-14">
+          <ButtonRounded active={tabState === 1} onClick={() => handleTab(1)}>
             2023
           </ButtonRounded>
-          <ButtonRounded
-            active={tabState == 2 && true}
-            onClick={() => handleTab(2)}
-          >
+          <ButtonRounded active={tabState === 2} onClick={() => handleTab(2)}>
             2022
           </ButtonRounded>
-          <ButtonRounded
-            active={tabState == 3 && true}
-            onClick={() => handleTab(3)}
-          >
+          <ButtonRounded active={tabState === 3} onClick={() => handleTab(3)}>
             2021
           </ButtonRounded>
-          <ButtonRounded
-            active={tabState == 4 && true}
-            onClick={() => handleTab(4)}
-          >
+          <ButtonRounded active={tabState === 4} onClick={() => handleTab(4)}>
             2020
           </ButtonRounded>
         </div>
 
-        {/* tab state == 1 */}
+        {/* tab content */}
         <TabContent
           className={tabState == 1 ? null : "hidden"}
           data={data["yearlyData"][0]}

@@ -38,7 +38,7 @@ function TabContent({ className, data, ...props }) {
         <CounterLabel className="text-xs">العمليات المؤتمتة </CounterLabel>
         <CounterNumber>
           <span dir="ltr">{autoProcess.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
@@ -58,7 +58,7 @@ function TabContent({ className, data, ...props }) {
         <CounterLabel className="text-xs">إجمالي العمليات</CounterLabel>
         <CounterNumber>
           <span dir="ltr">{totalOps.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
@@ -78,7 +78,7 @@ function TabContent({ className, data, ...props }) {
         <CounterLabel className="text-xs">العمليات الأخرى</CounterLabel>
         <CounterNumber>
           <span dir="ltr">{otherOps.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
@@ -100,7 +100,7 @@ function TabContent({ className, data, ...props }) {
         </CounterLabel>
         <CounterNumber>
           <span dir="ltr">{absherDownloads.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
@@ -122,7 +122,7 @@ function TabContent({ className, data, ...props }) {
         </CounterLabel>
         <CounterNumber>
           <span dir="ltr">{techSupportNeed.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
@@ -142,7 +142,7 @@ function TabContent({ className, data, ...props }) {
         <CounterLabel className="text-xs">إجمالي الهويات الرقمية</CounterLabel>
         <CounterNumber>
           <span dir="ltr">{totalDigitalIds.value}</span>
-          <span className="text-3xl">م</span>
+          <span className="text-xl md:text-3xl">م</span>
         </CounterNumber>
         <CounterLabel
           type="primary"
