@@ -23,7 +23,7 @@ function Header() {
           </motion.p>
         </div>
       </div>
-      <div className="bg-primary absolute inset-0 md:right-1/2 bg-mesh-pattern opacity-40 md:opacity-0 bg-repeat-x bg-60 bg-right-bottom z-[1]"></div>
+      <div className="bg-primary absolute inset-0 md:right-1/2 bg-mesh-pattern opacity-40 md:opacity-100 bg-repeat-x bg-60 bg-right-bottom z-[1]"></div>
     </header>
   );
 }
