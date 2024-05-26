@@ -1,11 +1,12 @@
-import clsx from "clsx";
+import cn from "../utilities/cn";
 
-function CounterLabel({ children, type }) {
+function CounterLabel({ children, type, className }) {
   return (
     <div
-      className={clsx(
-        "inline-flex items-center gap-2",
-        type ? "text-emerald-500 text-sm font-bold" : "text-accent"
+      className={cn(
+        "inline-flex items-center leading-none text-center gap-2",
+        type ? "text-emerald-500 text-xs md:text-sm font-bold" : "text-accent",
+        className
       )}
     >
       {children}

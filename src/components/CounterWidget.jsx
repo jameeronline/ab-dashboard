@@ -1,27 +1,14 @@
-import CounterLabel from "./CounterLabel";
-import CounterNumber from "./CounterNumber";
+import cn from "../utilities/cn";
 
-//icons
-import decreaseIcon from "../assets/decrease.svg";
-import increaseicon from "../assets/increase.svg";
-
-function CounterWidget({
-  children,
-  value,
-  size,
-  type,
-  decrease = false,
-  icon,
-}) {
+function CounterWidget({ children, className }) {
   return (
-    <div className="flex flex-col justify-center items-center gap-4 mb-20">
-      <img src={icon} />
-      <CounterLabel>Total Operations</CounterLabel>
-      <CounterNumber size={size}>{value}</CounterNumber>
-      <CounterLabel type={type}>
-        <img src={decrease == true ? decreaseIcon : increaseicon} alt="" />
-        Operations 2023
-      </CounterLabel>
+    <div
+      className={cn(
+        "flex flex-col justify-center items-center gap-2 md:gap-4",
+        className
+      )}
+    >
+      {children}
     </div>
   );
 }

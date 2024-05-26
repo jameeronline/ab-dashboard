@@ -1,0 +1,139 @@
+{
+  "reports": {
+    "totalOps": "221,619,091",
+    "yearlyData": [
+      {
+        "year": "2023",
+        "autoProcesses": {
+          "value": "41.9+",
+          "update": "87%",
+          "increased": true
+        },
+        "totalOps": {
+          "value": "22.6+",
+          "update": "45%",
+          "increased": true
+        },
+        "otherOps": {
+          "value": "17.5+",
+          "update": "59%",
+          "increased": false
+        },
+        "absherDownloads": {
+          "value": "24.01+",
+          "update": "77%",
+          "increased": true
+        },
+        "techSupportNeed": {
+          "value": "1.1%",
+          "update": "13%",
+          "increased": false
+        },
+        "totalDigitalIds": {
+          "value": "179.6+",
+          "update": "92%",
+          "increased": true
+        }
+      },
+      {
+        "year": "2022",
+        "autoProcesses": {
+          "value": "39.2+",
+          "update": "56%",
+          "increased": true
+        },
+        "totalOps": {
+          "value": "21.3+",
+          "update": "47%",
+          "increased": false
+        },
+        "otherOps": {
+          "value": "16.8+",
+          "update": "64%",
+          "increased": false
+        },
+        "absherDownloads": {
+          "value": "23.45+",
+          "update": "34%",
+          "increased": true
+        },
+        "techSupportNeed": {
+          "value": "1.0%",
+          "update": "28%",
+          "increased": false
+        },
+        "totalDigitalIds": {
+          "value": "170.2+",
+          "update": "82%",
+          "increased": true
+        }
+      },
+      {
+        "year": "2021",
+        "autoProcesses": {
+          "value": "37.0+",
+          "update": "73%",
+          "increased": true
+        },
+        "totalOps": {
+          "value": "20.1+",
+          "update": "19%",
+          "increased": false
+        },
+        "otherOps": {
+          "value": "15.4+",
+          "update": "51%",
+          "increased": true
+        },
+        "absherDownloads": {
+          "value": "22.30+",
+          "update": "96%",
+          "increased": true
+        },
+        "techSupportNeed": {
+          "value": "0.9%",
+          "update": "62%",
+          "increased": false
+        },
+        "totalDigitalIds": {
+          "value": "160.0+",
+          "update": "88%",
+          "increased": true
+        }
+      },
+      {
+        "year": "2020",
+        "autoProcesses": {
+          "value": "35.5+",
+          "update": "44%",
+          "increased": false
+        },
+        "totalOps": {
+          "value": "18.7+",
+          "update": "33%",
+          "increased": true
+        },
+        "otherOps": {
+          "value": "14.2+",
+          "update": "55%",
+          "increased": false
+        },
+        "absherDownloads": {
+          "value": "21.15+",
+          "update": "78%",
+          "increased": true
+        },
+        "techSupportNeed": {
+          "value": "0.8%",
+          "update": "14%",
+          "increased": false
+        },
+        "totalDigitalIds": {
+          "value": "150.3+",
+          "update": "61%",
+          "increased": true
+        }
+      }
+    ]
+  }
+}
