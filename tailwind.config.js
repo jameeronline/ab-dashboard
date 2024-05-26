@@ -20,7 +20,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "mesh-pattern": "url('src/assets/bg.svg')",
+        "mesh-pattern": "url('/bg.svg')",
       },
       backgroundSize: {
         50: "50%",
