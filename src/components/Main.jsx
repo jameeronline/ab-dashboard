@@ -12,35 +12,19 @@ import ButtonRounded from "./Button";
 import CounterWidget from "./CounterWidget";
 import TabContent from "./TabContent";
 
-//API
-import { getAbsherData } from "../api/dashboard";
+//react query
+import { useAbsherData } from "../api/queries";
 
 function Main() {
   const [tabState, setTabState] = useState(1);
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await getAbsherData();
-        setData(result);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const { data, isError, isPending, error } = useAbsherData();
 
   const handleTab = (id) => {
     setTabState(id);
   };
 
-  if (loading) {
+  if (isPending) {
     return (
       <main className="lg:container mx-auto px-4 -mt-6 md:-mt-12 z-10 relative">
         <div className="bg-white rounded-2xl shadow-lg px-4 py-6 mb-0 md:p-12">
@@ -52,7 +36,7 @@ function Main() {
     );
   }
 
-  if (error) {
+  if (isError) {
     return <div>Error: {error.message}</div>;
   }
 
